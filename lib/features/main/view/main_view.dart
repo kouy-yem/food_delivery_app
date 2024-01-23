@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../home/view/home_view.dart';
-import '../../navigation/navigation.dart';
+import '../../navigation/page/navigation_page.dart';
 
 late TabController tabController;
 
@@ -32,14 +31,7 @@ class _MainViewState extends State<MainView>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TabBarView(
-        controller: tabController,
-        physics: const NeverScrollableScrollPhysics(),
-        children: const [
-          HomeView(),
-        ],
-      ),
-      bottomNavigationBar: Navigation(tabController: tabController),
+      body: NavigatorPage(),
     );
   }
 }

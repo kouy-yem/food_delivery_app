@@ -1,5 +1,5 @@
-name: flutter_kokopon_farmer_app
-description: This app buid with flutter
+name: food_delivery_app
+description: This app build with flutter
 version: 1.0.0+1
 publish_to: none
 
@@ -71,6 +71,7 @@ dependencies:
   confetti: ^0.7.0
   location: ^5.0.2+1
   firebase_core: ^2.24.0
+  flutter_native_splash: ^2.3.9
 
 
 dev_dependencies:
@@ -100,8 +101,11 @@ flutter_gen:
     flutter_image: true
     rive: true
     lottie: true
-
-
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/images/
+    - assets/logo/
+    - assets/splash/
+    - assets/svg/

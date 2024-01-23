@@ -114,73 +114,78 @@ class TextFieldForms extends StatefulWidget {
 class _TextFieldFormsState extends State<TextFieldForms> {
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      onChanged: widget.onChange,
-      obscureText: widget.obscureText!,
-      enabled: widget.enable,
-      validator: widget.validator,
-      controller: widget.controller,
-      keyboardType: widget.keyboardType,
-      maxLines: widget.maxLines,
-      minLines: widget.minLines,
-      onTap: widget.onTap,
-      style: Theme.of(context).textTheme.labelLarge!.copyWith(
-        fontSize: 18,
-        fontWeight: FontWeight.w400,
-        color: AppColors.kColorBlack,
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
       ),
-      decoration: InputDecoration(
-        border: InputBorder.none,
-        hintText: widget.hintText,
-        prefixText: widget.prefixText,
-        prefixIconConstraints:  BoxConstraints(
-          minWidth: widget.minWith!,
-          minHeight: widget.minHeight!,
-        ),
-        prefixStyle: const TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.w400,
-        ),
-        hintStyle: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w400,
-          color: AppColors.kColorGrey,
-        ),
-        suffixIcon: IconButton(
-          splashRadius: 24,
-          onPressed: widget.onPressed,
-          icon: Icon(
-            widget.suffixIcon,
-            size: 24,
+      child: TextFormField(
+        onChanged: widget.onChange,
+        obscureText: widget.obscureText!,
+        enabled: widget.enable,
+        validator: widget.validator,
+        controller: widget.controller,
+        keyboardType: widget.keyboardType,
+        maxLines: widget.maxLines,
+        minLines: widget.minLines,
+        onTap: widget.onTap,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          hintText: widget.hintText,
+          prefixText: widget.prefixText,
+          prefixIconConstraints:  BoxConstraints(
+            minWidth: widget.minWith!,
+            minHeight: widget.minHeight!,
           ),
-        ),
-        prefixIcon: widget.prefixIcon,
-        contentPadding:
-        const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(11),
-          borderSide: const BorderSide(color: Colors.red),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(11),
-          borderSide: const BorderSide(color: Colors.red),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(11),
-          borderSide:  BorderSide(color: AppColors.kColorGrey.withOpacity(0.2)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(11),
-          borderSide: BorderSide(
-            color: Theme.of(context).colorScheme.primary,
+          prefixStyle: const TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
           ),
+          hintStyle: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w400,
+            color: AppColors.kColorWhite,
+          ),
+          suffixIcon: IconButton(
+            splashRadius: 24,
+            onPressed: widget.onPressed,
+            icon: Icon(
+              widget.suffixIcon,
+              size: 24,
+             color: AppColors.kColorWhite,
+            ),
+          ),
+          prefixIcon: widget.prefixIcon,
+          contentPadding:
+          const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(11),
+            borderSide: const BorderSide(color: Colors.red),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(11),
+            borderSide: const BorderSide(color: Colors.red),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(11),
+            borderSide:  BorderSide(color: AppColors.kColorGrey.withOpacity(0.2)),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(11),
+            borderSide: BorderSide(
+              color: Theme.of(context).colorScheme.brightness == Brightness.dark
+                  ? AppColors.kColorWhite
+                  : AppColors.kColorBlack,
+            ),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(11),
+            borderSide:  BorderSide(color: AppColors.kColorGrey.withOpacity(0.2)
+            ),
+          ),
+          filled: true,
+          fillColor: AppColors.kColorGrey.withOpacity(0.5),
         ),
-        disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(11),
-          borderSide:  BorderSide(color: AppColors.kColorGrey.withOpacity(0.2)),
-        ),
-        filled: true,
-        fillColor: AppColors.kColorWhite,),
+      ),
     );
   }
 }

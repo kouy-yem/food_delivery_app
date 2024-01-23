@@ -1,0 +1,1 @@
+ /Users/aditi/Documents/Dev/personal-project/food_delivery_app/.dart_tool/flutter_build/0c42d2ce6e4b4da64544de576da683a2/native_assets.yaml: 

@@ -1,12 +1,12 @@
 import 'dart:developer';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_kokopon_farmer_app/data/storages/storage.dart';
 import "package:http_client/http_client.dart";
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:dio/dio.dart';
 
 import '../app/view/app.dart';
 import '../data/model/environment.dart';
+import '../data/storages/storage.dart';
 import '../shared/interceptors/authentication_queued_interceptor.dart';
 import '../shared/storages/token_storage_provider.dart';
 import 'bootstrap.dart';

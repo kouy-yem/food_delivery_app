@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kokopon_farmer_app/features/home/view/home_view.dart';
+
 import 'package:go_router/go_router.dart';
+
+import '../../main/view/main_view.dart';
 
 
 class SplashView extends StatefulWidget {
@@ -19,7 +21,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      context.go(HomeView.routePath);
+      context.go(MainView.routePath);
     });
   }
 

@@ -4,6 +4,8 @@ abstract class AppColors {
   // primary color
   static const Color kPrimaryColor = Color(0xFF1CB666);
 
+  // background color
+  static const Color kBackgroundColor = Color(0xFF0D0D0D);
   /// The pale sky color.
   static const Color kColorGrey = Color(0xFF666666);
 
